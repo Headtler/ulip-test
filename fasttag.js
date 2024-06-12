@@ -1,4 +1,4 @@
-import axios from 'axios';
+const axios = require('axios');
 
 // Function to log in and return the access token
 async function getAccessToken() {
