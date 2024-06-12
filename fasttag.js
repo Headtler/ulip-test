@@ -39,7 +39,7 @@ async function fetchVehicleDetails(accessToken, vehicleNumber) {
   
   // Example usage
   async function main() {
-    const vehicleNumber = 'MH12PN6051'; // Replace with actual vehicle registration number
+    const vehicleNumber = 'WB57D7843'; // Replace with actual vehicle registration number
     const accessToken = await getAccessToken();
     console.log(accessToken,"accessTokenaccessTokenaccessToken")
     if (accessToken) {
