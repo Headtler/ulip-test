@@ -9,7 +9,7 @@ const config = {
     },
     data : JSON.stringify({
         // "vehiclenumber": "MH12NW4402",
-        "vehiclenumber": "MH12ML3311"
+        "vehiclenumber": "UP91L0001"
     })
 };
 
