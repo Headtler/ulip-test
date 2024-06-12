@@ -4,8 +4,8 @@ import axios from 'axios';
 async function getAccessToken() {
   try {
     const response = await axios.post('https://www.ulipstaging.dpiit.gov.in/ulip/v1.0.0/user/login', {
-      username: 'xxxx',  // Replace 'xxxx' with actual username
-      password: 'xxxx@123'  // Replace 'xxxx@123' with actual password
+      username: 'easemy_usr',  // Replace 'xxxx' with actual username
+      password: 'easemy@12062024'  // Replace 'xxxx@123' with actual password
     }, {
       headers: {
         'Accept': 'application/json',
