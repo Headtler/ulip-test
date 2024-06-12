@@ -3,8 +3,8 @@ const axios = require('axios');
 const login = async () => {
   const url = 'https://www.ulipstaging.dpiit.gov.in/ulip/v1.0.0/user/login';
   const data = {
-    username: '1',
-    password: 'ea2y@212024'
+    username: 'easemy_usr',
+    password: 'easemy@12062024'
   };
   const config = {
     headers: {
