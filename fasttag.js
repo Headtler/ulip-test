@@ -12,6 +12,7 @@ async function getAccessToken() {
         'Content-Type': 'application/json'
       }
     });
+    console.log( response.data," response.data response.data response.data")
     return response.data.access_token; // Adjust this if the token is nested differently in response
   } catch (error) {
     console.error('Login Error:', error);
@@ -40,6 +41,7 @@ async function fetchVehicleDetails(accessToken, vehicleNumber) {
   async function main() {
     const vehicleNumber = 'MH12PN6051'; // Replace with actual vehicle registration number
     const accessToken = await getAccessToken();
+    console.log(accessToken,"accessTokenaccessTokenaccessToken")
     if (accessToken) {
       await fetchVehicleDetails(accessToken, vehicleNumber);
     }
