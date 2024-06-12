@@ -8,7 +8,7 @@ const config = {
         'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlYXNlbXlfdXNyIiwiaWF0IjoxNzE4MTk1NTcyLCJhcHBzIjoiZGF0YXB1c2gifQ.jPuoztXkKOA3O5BAT-izUdYXkP0iLSNJ-crOWwYy6WWrkVfBY6ohJ3zSVY5IjLkQeLIBPMXTU576oxe0bUmd3A'
     },
     data : JSON.stringify({
-        "vehiclenumber": "AP16AX2794"
+        "vehiclenumber": "MH12NW4402"
     })
 };
 
