@@ -31,7 +31,7 @@ async function fetchVehicleDetails(accessToken, vehicleNumber) {
           'Content-Type': 'application/json'
         }
       });
-      console.log('Vehicle Details:', response.data);
+      console.log('Vehicle Details:', response.data.response[0].response);
     } catch (error) {
       console.error('Fetch Vehicle Details Error:', error);
     }
