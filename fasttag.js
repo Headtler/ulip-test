@@ -1,21 +1,49 @@
-const axios = require('axios');
+import axios from 'axios';
 
-const config = {
-  method: 'post',
-  url: 'https://www.ulipstaging.dpiit.gov.in/ulip/v1.0.0/OFIASTAG/01',
-  headers: { 
-    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJNLVdTdGF2TklJLHJlY29yZCBVbGlQIiwiaXNzIjoiTmV0bHlJbXByb3ZlIiwiaWF0IjoxNjM5ODI3OTQ1LCJleHAiOjE2Mzk4MzE1NDUsImNsaWVudF9pZCI6IjEiLCJ1c2VyX2lkIjoxfQ.Sl6J2OMDY3MaTouoqH1b4wGlrNzWkk5jZvAucp22I4E', 
-    'Content-Type': 'application/json'
-  },
-  data : JSON.stringify({
-    "vehiclenumber": "MH04JK9325"
-  })
-};
-
-axios(config)
-  .then(function (response) {
-    console.log(JSON.stringify(response.data));
-  })
-  .catch(function (error) {
-    console.error(error);
-  });
+// Function to log in and return the access token
+async function getAccessToken() {
+  try {
+    const response = await axios.post('https://www.ulipstaging.dpiit.gov.in/ulip/v1.0.0/user/login', {
+      username: 'xxxx',  // Replace 'xxxx' with actual username
+      password: 'xxxx@123'  // Replace 'xxxx@123' with actual password
+    }, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    });
+    return response.data.access_token; // Adjust this if the token is nested differently in response
+  } catch (error) {
+    console.error('Login Error:', error);
+    return null;
+  }
+}
+// Function to fetch vehicle details using the access token
+async function fetchVehicleDetails(accessToken, vehicleNumber) {
+    try {
+      const response = await axios.post('https://www.ulipstaging.dpiit.gov.in/ulip/v1.0.0/FASTAG/01', {
+        vehiclenumber: vehicleNumber
+      }, {
+        headers: {
+          'Authorization': `Bearer ${accessToken}`,
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      });
+      console.log('Vehicle Details:', response.data);
+    } catch (error) {
+      console.error('Fetch Vehicle Details Error:', error);
+    }
+  }
+  
+  // Example usage
+  async function main() {
+    const vehicleNumber = 'MH12PN6051'; // Replace with actual vehicle registration number
+    const accessToken = await getAccessToken();
+    if (accessToken) {
+      await fetchVehicleDetails(accessToken, vehicleNumber);
+    }
+  }
+  
+  main();
+  
