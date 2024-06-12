@@ -2,7 +2,7 @@ const axios = require('axios');
 
 const config = {
     method: 'post',
-    url: 'https://www.ulipstaging.dgip.gov.in/ulip/v1.0/VEHAN/01',
+    url: 'https://www.ulip.dgip.gov.in/ulip/v1.0/VEHAN/01',
     headers: { 
         'Content-Type': 'application/json',
         'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlYXNlbXlfdXNyIiwiaWF0IjoxNzE4MTk1NTcyLCJhcHBzIjoiZGF0YXB1c2gifQ.jPuoztXkKOA3O5BAT-izUdYXkP0iLSNJ-crOWwYy6WWrkVfBY6ohJ3zSVY5IjLkQeLIBPMXTU576oxe0bUmd3A'
