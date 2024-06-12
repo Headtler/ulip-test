@@ -14,7 +14,7 @@ async function loginAndGetToken() {
         'Content-Type': 'application/json'
       }
     });
-    return response.data.token; // Assuming the token is returned in the 'token' field
+    return  response.data.response.id; // Assuming the token is returned in the 'token' field
   } catch (error) {
     console.error('Login failed:', error.response ? error.response.data : error);
     return null;
