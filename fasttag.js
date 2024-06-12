@@ -8,7 +8,7 @@ const config = {
     'Content-Type': 'application/json'
   },
   data : JSON.stringify({
-    "vehiclenumber": "MH12PN6051"
+    "vehiclenumber": "MH04JK9325"
   })
 };
 
