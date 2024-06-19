@@ -4,24 +4,22 @@ const axios = require('axios');
 async function loginAndGetToken() {
     const loginUrl = 'https://www.ulipstaging.dpiit.gov.in/ulip/v1.0.0/user/login';
     const credentials = {
-         username: 'easemy_usr',
-    password: 'easemy@12062024'
+      username: 'easemy_usr',
+      password: 'easemy@12062024'
     };
     try {
-        const response = await axios.post(loginUrl, credentials, {
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        });
-        console.log(response.data.token,"response.data.tokenresponse.data.token")
-        return response.data.token; // Make sure the token is being accessed correctly based on the actual API response structure
+      const response = await axios.post(loginUrl, credentials, {
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      });
+      return  response.data.response.id; // Assuming the token is returned in the 'token' field
     } catch (error) {
-        console.error('Login failed:', error.response ? error.response.data : error);
-        return null;
+      console.error('Login failed:', error.response ? error.response.data : error);
+      return null;
     }
-}
-
+  }
 // Function to get vehicle details using the token
 async function getDLDetails(token) {
     const apiUrl = 'https://www.ulip.dpiit.gov.in/ulip/v1.0.0/SARATHI/01';
