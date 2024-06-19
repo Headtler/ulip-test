@@ -14,6 +14,7 @@ async function loginAndGetToken() {
                 'Content-Type': 'application/json'
             }
         });
+        console.log(response.data.token,"response.data.tokenresponse.data.token")
         return response.data.token; // Make sure the token is being accessed correctly based on the actual API response structure
     } catch (error) {
         console.error('Login failed:', error.response ? error.response.data : error);
