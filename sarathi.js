@@ -37,7 +37,7 @@ async function getDLDetails(token) {
         });
         console.log('Vehicle details:', response.data);
     } catch (error) {
-        console.error('Request failed:', error.response ? error.response.data : error);
+        console.error(error ,'Request failed:', error.response ? error.response.data : error);
     }
 }
 
