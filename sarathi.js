@@ -25,8 +25,8 @@ async function getDLDetails(token) {
     console.log(token,"tokentoken")
     const apiUrl = 'https://www.ulipstaging.dpiit.gov.in/ulip/v1.0.0/SARATHI/01';
     const vehicleData = {
-        dlnumber: 'TS03320190000537',
-        dob: '1997-06-25'
+      "dlnumber": "GJ04 20120005008",
+ "dob": "1987-05-26"
     };
     try {
         const response = await axios.post(apiUrl, vehicleData, {
