@@ -22,6 +22,7 @@ async function loginAndGetToken() {
   }
 // Function to get vehicle details using the token
 async function getDLDetails(token) {
+    console.log(token,"tokentoken")
     const apiUrl = 'https://www.ulipstaging.dpiit.gov.in/ulip/v1.0.0/SARATHI/01';
     const vehicleData = {
         dlnumber: 'TS03320190000537',
