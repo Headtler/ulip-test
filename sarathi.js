@@ -4,8 +4,8 @@ const axios = require('axios');
 async function loginAndGetToken() {
     const loginUrl = 'https://www.ulipstaging.dpiit.gov.in/ulip/v1.0.0/user/login';
     const credentials = {
-        username: 'easy', // Complete and correct the username
-        password: 'easy123' // Complete and correct the password
+         username: 'easemy_usr',
+    password: 'easemy@12062024'
     };
     try {
         const response = await axios.post(loginUrl, credentials, {
@@ -22,10 +22,11 @@ async function loginAndGetToken() {
 }
 
 // Function to get vehicle details using the token
-async function getVehicleDetails(token) {
-    const apiUrl = 'https://www.ulipstaging.dpiit.gov.in/ulip/v1.0.0/VAHAN/01';
+async function getDLDetails(token) {
+    const apiUrl = 'https://www.ulip.dpiit.gov.in/ulip/v1.0.0/SARATHI/01';
     const vehicleData = {
-        vehiclenumber: 'HP857787'
+        dlnumber: 'TS03320190000537',
+        dob: '1997-06-25'
     };
     try {
         const response = await axios.post(apiUrl, vehicleData, {
@@ -45,7 +46,7 @@ async function getVehicleDetails(token) {
 async function main() {
     const token = await loginAndGetToken();
     if (token) {
-        await getVehicleDetails(token);
+        await getDLDetails(token);
     } else {
         console.log('Failed to retrieve token.');
     }
