@@ -90,10 +90,10 @@ async function getDLDetails(accessToken, vehicleNumber) {
         'Content-Type': 'application/json'
       }
     });
-    console.log('FastTag Details:', response.data.response[0].response);
-    console.log('FastTag Details:', response.data.response[0].response.vehicle.vehltxnList.txn);
+    console.log('Sarathi Details:', response.data.response[0].response);
+    console.log('Sarathi Details:', response.data.response[0].response.vehicle.vehltxnList.txn);
   } catch (error) {
-    console.error('Fetch FastTag Details Error:', error);
+    console.error('Fetch Sarathi Details Error:', error);
   }
 }
 
