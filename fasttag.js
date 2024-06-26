@@ -31,10 +31,10 @@ async function fetchVehicleDetails(accessToken, vehicleNumber) {
           'Content-Type': 'application/json'
         }
       });
-      console.log('Vehicle Details:', response.data.response[0].response);
-      console.log('Vehicle Details:', response.data.response[0].response.vehicle.vehltxnList.txn);
+      console.log('FastTag Details:', response.data.response[0].response);
+      console.log('FastTag Details:', response.data.response[0].response.vehicle.vehltxnList.txn);
     } catch (error) {
-      console.error('Fetch Vehicle Details Error:', error);
+      console.error('Fetch FastTag Details Error:', error);
     }
   }
   
