@@ -91,14 +91,14 @@ async function getDLDetails(accessToken, vehicleNumber) {
       }
     });
 
-    console.log('transReqObj:', data.response[0].response.dldetobj[0].transReqObj);
-console.log('psvBadgeissued:', data.response[0].response.dldetobj[0].psvBadgeissued);
-console.log('dlcovs:', data.response[0].response.dldetobj[0].dlcovs);
+    console.log('transReqObj:', response.data.response[0].response.dldetobj[0].transReqObj);
+console.log('psvBadgeissued:', response.data.response[0].response.dldetobj[0].psvBadgeissued);
+console.log('dlcovs:', response.data.response[0].response.dldetobj[0].dlcovs);
 
 // Logging the objects
-console.log('bioObj:', data.response[0].response.dldetobj[0].bioObj);
-console.log('dlobj:', data.response[0].response.dldetobj[0].dlobj);
-console.log('bioImgObj:', data.response[0].response.dldetobj[0].bioImgObj);
+console.log('bioObj:', response.data.response[0].response.dldetobj[0].bioObj);
+console.log('dlobj:', response.data.response[0].response.dldetobj[0].dlobj);
+console.log('bioImgObj:', response.data.response[0].response.dldetobj[0].bioImgObj);
     console.log('Sarathi Details:', response.data.response[0].response);
     console.log('Sarathi Details:', response.data.response[0].response.vehicle);
   } catch (error) {
