@@ -81,8 +81,8 @@ async function getDLDetails(accessToken, vehicleNumber) {
   try {
     const response = await axios.post('https://www.ulipstaging.dpiit.gov.in/ulip/v1.0.0/SARATHI/01',
       {
-        dlnumber: "GJ04 20120005008",
-        dob: "1987-05-26"
+        dlnumber: "AP33120190047437",
+        dob: "2001-07-21"
       }, {
       headers: {
         'Authorization': `Bearer ${accessToken}`,
@@ -91,7 +91,7 @@ async function getDLDetails(accessToken, vehicleNumber) {
       }
     });
     console.log('Sarathi Details:', response.data.response[0].response);
-    console.log('Sarathi Details:', response.data.response[0].response.vehicle.vehltxnList.txn);
+    console.log('Sarathi Details:', response.data.response[0].response.vehicle);
   } catch (error) {
     console.error('Fetch Sarathi Details Error:', error);
   }
