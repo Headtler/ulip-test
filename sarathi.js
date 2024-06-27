@@ -81,8 +81,8 @@ async function getDLDetails(accessToken, vehicleNumber) {
   try {
     const response = await axios.post('https://www.ulipstaging.dpiit.gov.in/ulip/v1.0.0/SARATHI/01',
       {
-        dlnumber: "AP33120190047437",
-        dob: "2001-07-21"
+        dlnumber: "GJ04 20120005008",
+        dob: "1987-05-26"
       }, {
       headers: {
         'Authorization': `Bearer ${accessToken}`,
@@ -90,6 +90,15 @@ async function getDLDetails(accessToken, vehicleNumber) {
         'Content-Type': 'application/json'
       }
     });
+
+    console.log('transReqObj:', data.response[0].response.dldetobj[0].transReqObj);
+console.log('psvBadgeissued:', data.response[0].response.dldetobj[0].psvBadgeissued);
+console.log('dlcovs:', data.response[0].response.dldetobj[0].dlcovs);
+
+// Logging the objects
+console.log('bioObj:', data.response[0].response.dldetobj[0].bioObj);
+console.log('dlobj:', data.response[0].response.dldetobj[0].dlobj);
+console.log('bioImgObj:', data.response[0].response.dldetobj[0].bioImgObj);
     console.log('Sarathi Details:', response.data.response[0].response);
     console.log('Sarathi Details:', response.data.response[0].response.vehicle);
   } catch (error) {
