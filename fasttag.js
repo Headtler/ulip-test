@@ -37,7 +37,7 @@ async function fetchVehicleDetails(accessToken, vehicleNumber) {
       console.error('Fetch FastTag Details Error:', error);
     }
   }
-  MH12PN6251
+  
   // Example usage
   async function main() {
     const vehicleNumber = 'MH12PN6251'; // Manish Sir
