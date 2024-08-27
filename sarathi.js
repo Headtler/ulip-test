@@ -81,8 +81,8 @@ async function getDLDetails(accessToken, vehicleNumber) {
   try {
     const response = await axios.post('https://www.ulipstaging.dpiit.gov.in/ulip/v1.0.0/SARATHI/01',
       {
-        dlnumber: "MH1220190022267",
-        dob: "1997-04-10"
+        dlnumber: "MH0120060020829",
+        dob: "1985-05-15"
       }, {
       headers: {
         'Authorization': `Bearer ${accessToken}`,
