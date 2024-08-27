@@ -81,8 +81,8 @@ async function getDLDetails(accessToken, vehicleNumber) {
   try {
     const response = await axios.post('https://www.ulipstaging.dpiit.gov.in/ulip/v1.0.0/SARATHI/01',
       {
-        dlnumber: "GJ04 20120005008",
-        dob: "1987-05-26"
+        dlnumber: "MH1220190022267",
+        dob: "1997-04-10"
       }, {
       headers: {
         'Authorization': `Bearer ${accessToken}`,
@@ -111,6 +111,7 @@ async function main() {
   // const vehicleNumber = 'MH18BG6198'; // Replace with actual vehicle registration number
   // const vehicleNumber = 'MH04LE5221'; // Replace with actual vehicle registration number
   const vehicleNumber = 'CG07BC9186'; // Replace with actual vehicle registration number
+  // const vehicleNumber = 'CG07BC9186'; // Replace with actual vehicle registration number
   // const vehicleNumber = 'MH04LE5221'; // Replace with actual vehicle registration number
   const accessToken = await getAccessToken();
   console.log(accessToken, "accessTokenaccessTokenaccessToken")
