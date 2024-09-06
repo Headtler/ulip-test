@@ -41,7 +41,7 @@ async function fetchVehicleDetails(accessToken, vehicleNumber) {
   // Example usage
   async function main() {
     // const vehicleNumber = 'MH12PN6251'; // Manish Sir
-    const vehicleNumber = 'PB30R5810'; // Replace with actual vehicle registration number
+    const vehicleNumber = 'PB11BF4112'; // Replace with actual vehicle registration number
     // const vehicleNumber = 'MH04LE5221'; // Replace with actual vehicle registration number
     // const vehicleNumber = 'CG07BC9186'; // Replace with actual vehicle registration number
     // const vehicleNumber = 'MH04LE5221'; // Replace with actual vehicle registration number
