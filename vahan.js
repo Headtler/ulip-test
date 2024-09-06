@@ -25,7 +25,7 @@ async function loginAndGetToken() {
 async function getVehicleDetails(token) {
   const apiUrl = 'https://www.ulipstaging.dpiit.gov.in/ulip/v1.0.0/VAHAN/01';
   const vehicleData = {
-    vehiclenumber: 'WB11C6285' //PB22K4097
+    vehiclenumber: 'MP04GA6474' //PB22K4097
   };
   try {
     const response = await axios.post(apiUrl, vehicleData, {
